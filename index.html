@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="assets/logo.png" alt="DevBoard Logo">
+        <span>DevBoard</span>
+    </div>
+    <div class="header-right">
+        <div class="completed-task">
+            <img src="assets/checkbox.png"> <span id="completed-tasks" class="task-count">0</span>
+        </div>
+        <button class="color-panel-btn" onclick="changeColor()"><img src="assets/theme-btn.png"></button>
+    </div>
+</header>
+
+<div class="board-main">
+    <div class="board-container">
+        <div class="board-header">
+            <div class="board-stats">
+                <span id="task-assigned">6</span>
+                <p>Assigned Tasks</p>
+            </div>
+            <div class="board-banner" onclick="location.href='blog.html';" style="cursor: pointer;">
+                <img src="assets/board.png">
+                <h3>Discover Something New Today!</h3>
+            </div>
+            </a>
+            <div class="board-date">
+                <img src="assets/calender.png">
+                <span id="current-date"></span>
+            </div>
+        </div>
+
+        <div class="task-cards">
+            <div class="task-card" id="task1">
+                <div class="company-name">
+                    <span>ShopEase</span>
+                </div>
+                <div class="task-name">Fix Mobile Button Issue</div>
+                <div class="task-description">Debug using Chrome DevTools, check for overlapping issues...</div>
+                <div class="deadline">Deadline: <span>5 March 2025</span></div>
+                <button class="complete-btn" onclick="completeTask('task1', 'Fix Mobile Button Issue')">Complete</button>
+            </div>
+            <div class="task-card" id="task2">
+                <div class="company-name">
+                    <span>CloudSync</span>
+                </div>
+                <div class="task-name">Add Dark Mode</div>
+                <div class="task-description">Store the user's preference in localStorage...</div>
+                <div class="deadline">Deadline: <span>17 December 2024</span></div>
+                <button class="complete-btn" onclick="completeTask('task2', 'Add Dark Mode')">Complete</button>
+            </div>
+            <div class="task-card" id="task3">
+                <div class="company-name">
+                    <span>SwiftPay</span>
+                </div>
+                <div class="task-name">Optimize Home page</div>
+                <div class="task-description">Debug using Chrome DevTools...</div>
+                <div class="deadline">Deadline: <span>9 March 2025</span></div>
+                <button class="complete-btn" onclick="completeTask('task3', 'Optimize Home page')">Complete</button>
+            </div>
+            <div class="task-card" id="task4">
+                <div class="company-name">
+                    <span>Meta</span>
+                </div>
+                <div class="task-name">Add new emoji</div>
+                <div class="task-description">Debug using Chrome DevTools...</div>
+                <div class="deadline">Deadline: <span>4 April 2025</span></div>
+                <button class="complete-btn" onclick="completeTask('task4', 'Add new emoji')">Complete</button>
+            </div>
+            <div class="task-card" id="task5">
+                <div class="company-name">
+                    <span>Google LLC</span>
+                </div>
+                <div class="task-name">Integrate OpenAI API</div>
+                <div class="task-description">Debug using Chrome DevTools...</div>
+                <div class="deadline">Deadline: <span>21 March 2025</span></div>
+                <button class="complete-btn" onclick="completeTask('task5', 'Integrate OpenAI API')">Complete</button>
+            </div>
+            <div class="task-card" id="task6">
+                <div class="company-name">
+                    <span>Glassdoor</span>
+                </div>
+                <div class="task-name">Improve Job Searching</div>
+                <div class="task-description">Debug using Chrome DevTools...</div>
+                <div class="deadline">Deadline: <span>23 March 2025</span></div>
+                <button class="complete-btn" onclick="completeTask('task6', 'Improve Job Searching')">Complete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity Log Section -->
+    <div class="activity-log">
+        <div class="activity-header">
+            <img src="assets/activity.png" alt="Activity Icon">
+            <span>Activity Log</span>
+            <button onclick="clearHistory()">Clear History</button>
+        </div>
+        <div id="activity-log"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

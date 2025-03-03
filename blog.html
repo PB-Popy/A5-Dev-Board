@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="assets/logo.png" alt="DevBoard Logo">
+        <span>DevBoard</span>
+    </div>
+    <div class="header-right">
+        <a class="back-button" href="index.html">Back to Board</a>
+    </div>
+</header>
+
+<div class="blog-main">
+    <h3>Blogs</h3>
+    <div class="blogs">
+        <div class="blog">
+            <div class="question">
+                Question-1: What are the different ways to select an element in the DOM?
+            </div>
+            <div class="answer">
+                1. <code>getElementById()</code> – Selects an element by its ID.<br>
+                2. <code>getElementsByClassName()</code> – Selects elements by class name.<br>
+                3. <code>getElementsByTagName()</code> – Selects elements by tag name.<br>
+                4. <code>querySelector()</code> – Selects the first element matching a CSS selector.<br>
+                5. <code>children</code> – Selects direct child elements of a parent node.<br>
+                6. <code>parentNode</code> – Selects the parent of an element.<br>
+            </div>
+        </div>
+
+        <div class="blog">
+            <div class="question">
+                Question-2: What is the difference between innerHTML, innerText, and textContent ?
+            </div>
+            <div class="answer">
+                <b>innerHTML:</b> Returns or sets the HTML content inside an element, including any nested HTML tags. Example: <code>element.innerHTML = "<b>Hello</b>";</code>
+                <b>innerText:</b> Returns or sets the visible text content inside an element, excluding HTML tags. It reflects the rendered text on the page. Example: <code>element.innerText = "Hello";</code>
+                <b>textContent:</b> Returns or sets the text content inside an element, including hidden text, and does not interpret HTML tags. Example: <code>element.textContent = "Hello";</code>
+            </div>
+        </div>
+
+        <div class="blog">
+            <div class="question">
+                Question-3: What is event delegation in the DOM?
+            </div>
+            <div class="answer">
+                It is a technique in JavaScript where a single event listener is attached to a parent element instead of multiple event listeners on child elements. The event listener checks the event target and handles the event for the specific child element that triggered it. This enhances performance and simplifies handling events on dynamically added elements.
+            </div>
+        </div>
+
+        <div class="blog">
+            <div class="question">
+                Question-4: What is event bubbling in the DOM?
+            </div>
+            <div class="answer">
+                It is a behavior in the DOM where an event starts from the innermost element (the target) and then propagates upwards to its ancestors, triggering event listeners on each parent element along the way. This allows multiple elements to respond to the same event without needing individual event listeners for each.
+            </div>
+        </div>
+
+        <div class="blog">
+            <div class="question">
+                Question-5: How do you create, add, and remove elements using JavaScript?
+            </div>
+            <div class="answer">
+                <b>Creating an element:</b> Use <code>document.createElement(tagName)</code> to create a new element.<br>
+                <b>Adding an element:</b> Use <code>parentElement.appendChild(newElement)</code> to add the created element to the DOM.<br>
+                <b>Removing an element:</b> Use <code>parentElement.removeChild(childElement)</code> to remove an element from the DOM.<br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
